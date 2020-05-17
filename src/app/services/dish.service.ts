@@ -14,7 +14,8 @@ export class DishService {
   }
 
   getD(id: string): Dish{
-    return DISHES.filter((dish) => {dish.id === id})[0]
+    const dishy = DISHES.filter((dish) => {dish.id === id})[0]
+    return dishy
   }
 
   getFeaturedDish(): Dish {
