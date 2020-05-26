@@ -14,7 +14,7 @@
           <h3 *ngIf = "dish">{{dish.name | uppercase}}</h3>
             
         </mat-card-title>
-        <img mat-card-image="" src="{{dish.image}}" class="card-image">
+        <img mat-card-image="" src="{{ baseURL + dish.image }}" class="card-image">
         <mat-card-content>
           {{dish.description}}
         </mat-card-content>
@@ -82,6 +82,10 @@
         <button type="submit" mat-button class="background-primary text-floral-white" [disabled] = "commentForm.invalid">Submit</button>
       </form>
     </div>
+      <div fxFlex *ngIf ="errMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+      </div>
 </div>
 
 

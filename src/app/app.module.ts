@@ -17,6 +17,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 import {MatSliderModule} from '@angular/material/slider';
+import { baseURL } from './shared/baseurl';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http'
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service'
+
  
 
 
@@ -33,6 +38,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LeadersService } from './services/leaders.service';
+
 
 
 
@@ -72,12 +78,16 @@ import { LoginComponent } from './login/login.component';
     MatSelectModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule,
+    HttpModule
   ],
   providers: [
     DishService, 
     PromotionService,
-    LeadersService
+    LeadersService,
+    ProcessHTTPMsgService,
+    {provide: 'BaseURL', useValue: baseURL}
   ],
   entryComponents: [
     LoginComponent
