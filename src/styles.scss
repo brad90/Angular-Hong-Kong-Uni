@@ -17,3 +17,10 @@ container {
 span {
     display: block;
 }
+
+.highlight{
+    background-color: pink;
+    border: 1px solid green;
+    z-index: 1;
+    transform: scale(1.01);
+}
