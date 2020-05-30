@@ -8,7 +8,7 @@
     fxLayoutGap.xs="0"
     *ngIf="dish">
 
-    <div fxFlex="40">
+    <div fxFlex="40" [@expand]>
       <mat-card class="card">
         <mat-card-title>
           <h3 *ngIf = "dish" [@visibility]="visibility">{{dish.name | uppercase}}</h3>
